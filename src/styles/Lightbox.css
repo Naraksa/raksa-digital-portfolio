@@ -1,0 +1,144 @@
+/* ==========================================================================
+   LIGHTBOX GALLERY STYLES — Strict DESIGN.md Architecture
+   ========================================================================== */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 17, 21, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  animation: lightboxFadeIn 200ms ease-out forwards;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 150ms ease-out, color 150ms ease-out;
+  z-index: 10001;
+}
+
+.lightbox-close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 150ms ease-out, color 150ms ease-out;
+  z-index: 10000;
+}
+
+.lightbox-arrow:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.lightbox-arrow-left {
+  left: 24px;
+}
+
+.lightbox-arrow-right {
+  right: 24px;
+}
+
+.lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  max-height: 85%;
+  animation: lightboxScaleUp 250ms ease-out forwards;
+}
+
+.lightbox-image-wrapper {
+  position: relative;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-width: 80vw;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-counter {
+  margin-top: 16px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 4px 14px;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lightbox-counter .current {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@keyframes lightboxFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes lightboxScaleUp {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .lightbox-arrow {
+    width: 36px;
+    height: 36px;
+  }
+  .lightbox-arrow-left { left: 12px; }
+  .lightbox-arrow-right { right: 12px; }
+  .lightbox-close {
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+  }
+}

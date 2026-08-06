@@ -1,0 +1,249 @@
+/* ==========================================================================
+   Projects Section Styling — Premium Header & 4-Column Responsive Grid
+   ========================================================================== */
+
+.projects-section {
+  position: relative !important;
+  width: 100% !important;
+  padding: 60px 24px 80px !important;
+  border-bottom: 1px solid var(--border, #1e2029) !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+  min-height: 80vh !important;
+  overflow: hidden !important;
+}
+
+/* Ambient Header Glow — Spans Full 100vw Viewport Dynamically with Theme Accent */
+.projects-header-bg {
+  position: absolute !important;
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  height: 550px !important;
+  background: var(--hero-gradient, radial-gradient(ellipse 80% 60% at 50% 0%, var(--accent-glow) 0%, transparent 75%)) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  transition: background 0.5s ease, opacity 0.5s ease !important;
+}
+
+.projects-container {
+  position: relative !important;
+  z-index: 1 !important;
+  max-width: 1300px !important;
+  margin: 0 auto !important;
+}
+
+/* ---- Premium Header Wrapper ---- */
+.projects-header-wrapper {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  gap: 32px !important;
+  margin-bottom: 40px !important;
+  padding-bottom: 24px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.projects-header-left {
+  max-width: 680px !important;
+}
+
+.badge-category {
+  font-family: var(--mono, monospace) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
+  color: var(--accent, #c084fc) !important;
+  background: var(--accent-bg, rgba(168, 85, 247, 0.12)) !important;
+  border: 1px solid var(--accent-border, rgba(168, 85, 247, 0.3)) !important;
+  border-radius: 20px !important;
+  padding: 4px 12px !important;
+  display: inline-block !important;
+  margin-bottom: 14px !important;
+  text-transform: uppercase !important;
+}
+
+.projects-hero-heading {
+  font-size: clamp(32px, 3.8vw, 48px) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--text-h, #f3f4f6) !important;
+  margin: 0 0 14px !important;
+  line-height: 1.1 !important;
+}
+
+.highlight-text {
+  color: var(--accent, #c084fc) !important;
+  background: linear-gradient(135deg, #ffffff 40%, var(--accent, #c084fc) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.projects-subtitle {
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  color: var(--text-muted, #9ca3af) !important;
+  margin: 0 !important;
+}
+
+/* ---- Glassmorphism Filter Pills ---- */
+.projects-filters {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-shrink: 0 !important;
+}
+
+.filter-tab {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 18px !important;
+  border-radius: 30px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: var(--text-muted, #9ca3af) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  cursor: pointer !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  backdrop-filter: blur(8px) !important;
+  user-select: none !important;
+}
+
+.filter-tab:hover {
+  color: var(--accent, #c084fc) !important;
+  border-color: var(--accent-border) !important;
+  background: var(--accent-bg) !important;
+  transform: translateY(-2px) !important;
+}
+
+.filter-tab.active {
+  color: #ffffff !important;
+  background: var(--accent, #c084fc) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 4px 16px var(--accent-glow) !important;
+}
+
+.filter-count {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  padding: 2px 7px !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: inherit !important;
+}
+
+.filter-tab.active .filter-count {
+  background: rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+}
+
+/* ---- 4-Column Projects Grid ---- */
+.projects-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 20px !important;
+}
+
+/* Repository Only Single Button Styling */
+.project-link-btn.repo-only-btn {
+  width: 100% !important;
+  text-align: center !important;
+  justify-content: center !important;
+  background: var(--accent-bg, rgba(168, 85, 247, 0.12)) !important;
+  border: 1px solid var(--accent-border, rgba(168, 85, 247, 0.4)) !important;
+  color: var(--accent, #c084fc) !important;
+  font-weight: 700 !important;
+  padding: 10px 16px !important;
+  border-radius: 8px !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  text-decoration: none !important;
+}
+
+.project-link-btn.repo-only-btn:hover {
+  background: var(--accent, #c084fc) !important;
+  border-color: var(--accent) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px var(--accent-glow) !important;
+  transform: translateY(-1px) !important;
+}
+
+.card-link.repo-only-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  padding: 10px 16px !important;
+  border-radius: 8px !important;
+  background: var(--accent-bg, rgba(168, 85, 247, 0.12)) !important;
+  border: 1px solid var(--accent-border, rgba(168, 85, 247, 0.4)) !important;
+  color: var(--accent, #c084fc) !important;
+  font-weight: 700 !important;
+  font-size: 13.5px !important;
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.card-link.repo-only-link:hover {
+  background: var(--accent, #c084fc) !important;
+  border-color: var(--accent) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px var(--accent-glow) !important;
+}
+
+/* Empty State Card */
+.projects-placeholder-card {
+  grid-column: 1 / -1 !important;
+  background: var(--card-bg, #14151d) !important;
+  border: 1px dashed var(--accent-border, rgba(168, 85, 247, 0.4)) !important;
+  border-radius: 20px !important;
+  padding: 48px 32px !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 16px !important;
+  max-width: 640px !important;
+  margin: 20px auto !important;
+}
+
+.placeholder-pulse-icon {
+  width: 44px !important;
+  height: 44px !important;
+  color: var(--accent, #c084fc) !important;
+}
+
+.placeholder-title {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: var(--text-h, #f3f4f6) !important;
+  margin: 0 !important;
+}
+
+.placeholder-desc {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: var(--text-muted, #9ca3af) !important;
+  margin: 0 !important;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .projects-header-wrapper {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+  }
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

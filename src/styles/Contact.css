@@ -1,0 +1,302 @@
+/* ==========================================================================
+   Contact Page Styling — Spacious & Mobile Responsive Architecture
+   ========================================================================== */
+
+.contact-section {
+  position: relative !important;
+  width: 100% !important;
+  padding: 100px 32px 120px !important;
+  border-bottom: 1px solid var(--border, #1e2029) !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+  min-height: 85vh !important;
+  scroll-margin-top: 80px !important;
+}
+
+.contact-container {
+  position: relative !important;
+  z-index: 1 !important;
+  max-width: 1300px !important;
+  margin: 0 auto !important;
+}
+
+.contact-header {
+  text-align: center !important;
+  max-width: 720px !important;
+  margin: 0 auto 56px !important;
+}
+
+.contact-header .section-title {
+  font-size: clamp(28px, 3.8vw, 48px) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--text-h, #f3f4f6) !important;
+  margin: 0 0 16px !important;
+  line-height: 1.15 !important;
+}
+
+.contact-subtitle {
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+  color: var(--text-muted, #9ca3af) !important;
+  margin: 0 !important;
+}
+
+/* 2-Column Wide Grid Layout */
+.contact-content {
+  display: grid !important;
+  grid-template-columns: 1fr 1.15fr !important;
+  gap: 64px !important;
+  align-items: start !important;
+}
+
+.contact-info {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 28px !important;
+}
+
+.contact-message {
+  font-size: 16.5px !important;
+  line-height: 1.75 !important;
+  color: var(--text, #9ca3af) !important;
+  margin: 0 !important;
+}
+
+/* Contact Details Cards List */
+.contact-cards-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  width: 100% !important;
+}
+
+.contact-card-item {
+  background: var(--card-bg, #14151d) !important;
+  border: 1px solid var(--border, #1e2029) !important;
+  border-radius: 16px !important;
+  padding: 18px 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 18px !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.contact-card-item:hover {
+  border-color: var(--accent-border, rgba(168, 85, 247, 0.4)) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3), 0 0 15px var(--accent-glow) !important;
+  transform: translateY(-3px) !important;
+}
+
+.contact-icon-box {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 14px !important;
+  background: var(--accent-bg, rgba(168, 85, 247, 0.12)) !important;
+  border: 1px solid var(--accent-border, rgba(168, 85, 247, 0.3)) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.contact-icon-box svg {
+  width: 22px !important;
+  height: 22px !important;
+  color: var(--accent, #c084fc) !important;
+}
+
+.contact-card-text {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  flex-grow: 1 !important;
+  word-break: break-word !important;
+}
+
+.contact-card-label {
+  font-family: var(--mono, monospace) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  color: var(--accent, #c084fc) !important;
+  text-transform: uppercase !important;
+}
+
+.contact-card-value {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: var(--text-h, #f3f4f6) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+a.contact-card-value:hover {
+  color: var(--accent, #c084fc) !important;
+}
+
+.copy-btn {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--border, #1e2029) !important;
+  color: var(--text-h, #f3f4f6) !important;
+  border-radius: 20px !important;
+  padding: 6px 14px !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  flex-shrink: 0 !important;
+}
+
+.copy-btn:hover {
+  background: var(--accent, #c084fc) !important;
+  border-color: var(--accent) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 12px var(--accent-glow) !important;
+}
+
+.direct-social-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+
+.social-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 10px 20px !important;
+  border-radius: 30px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  color: var(--text-h, #f3f4f6) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.social-pill:hover {
+  color: #ffffff !important;
+  background: var(--accent, #c084fc) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 6px 20px var(--accent-glow) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Form Column Styling */
+.contact-form {
+  background: var(--card-bg, #14151d) !important;
+  border: 1px solid var(--border, #1e2029) !important;
+  border-radius: 24px !important;
+  padding: 40px 36px !important;
+  box-shadow: var(--shadow), 0 20px 45px rgba(0, 0, 0, 0.3) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 22px !important;
+  transition: border-color 0.3s ease !important;
+}
+
+.contact-form:hover {
+  border-color: var(--accent-border, rgba(168, 85, 247, 0.4)) !important;
+}
+
+.form-title {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: var(--text-h, #f3f4f6) !important;
+  margin: 0 0 6px !important;
+  letter-spacing: -0.01em !important;
+}
+
+.form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.form-group label {
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  color: var(--text-h, #f3f4f6) !important;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 14px 18px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--border, #1e2029) !important;
+  background: var(--bg, #0d0e12) !important;
+  color: var(--text-h, #f3f4f6) !important;
+  font-family: var(--sans, system-ui) !important;
+  font-size: 15px !important;
+  transition: all 0.25s ease !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none !important;
+  border-color: var(--accent, #c084fc) !important;
+  box-shadow: 0 0 18px var(--accent-glow) !important;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted, #6b7280) !important;
+}
+
+.btn-submit {
+  width: 100% !important;
+  padding: 16px 28px !important;
+  font-size: 15.5px !important;
+  font-weight: 800 !important;
+  border-radius: 30px !important;
+  margin-top: 10px !important;
+  box-shadow: 0 8px 25px var(--accent-glow) !important;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .contact-content {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .contact-form {
+    padding: 32px 24px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 95px 16px 60px !important;
+    scroll-margin-top: 80px !important;
+  }
+  .contact-header {
+    margin-bottom: 32px !important;
+  }
+  .contact-content {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .contact-card-item {
+    flex-wrap: wrap !important;
+    padding: 16px !important;
+  }
+  .contact-card-value {
+    font-size: 14.5px !important;
+  }
+  .contact-form {
+    padding: 24px 18px !important;
+    border-radius: 18px !important;
+  }
+  .direct-social-row {
+    justify-content: center !important;
+  }
+  .social-pill {
+    padding: 8px 16px !important;
+    font-size: 12.5px !important;
+  }
+}

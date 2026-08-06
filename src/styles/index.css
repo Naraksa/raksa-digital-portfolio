@@ -1,0 +1,193 @@
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fafafa;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --shadow-lg:
+    rgba(0, 0, 0, 0.15) 0 25px 50px -12px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  /* Artistic gradient tokens */
+  --hero-gradient: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    rgba(170, 59, 255, 0.12) 0%,
+    transparent 70%
+  );
+  --page-gradient: linear-gradient(
+    180deg,
+    rgba(170, 59, 255, 0.04) 0%,
+    transparent 40%
+  );
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #0d0e12;
+    --border: #1e2029;
+    --code-bg: #161720;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.12);
+    --accent-border: rgba(192, 132, 252, 0.4);
+    --social-bg: rgba(30, 32, 41, 0.6);
+    --shadow:
+      rgba(0, 0, 0, 0.5) 0 10px 15px -3px, rgba(0, 0, 0, 0.3) 0 4px 6px -2px;
+    --shadow-lg:
+      rgba(0, 0, 0, 0.6) 0 25px 50px -12px;
+    --hero-gradient: radial-gradient(
+      ellipse 80% 60% at 50% 0%,
+      rgba(192, 132, 252, 0.18) 0%,
+      transparent 70%
+    );
+    --page-gradient: linear-gradient(
+      180deg,
+      rgba(192, 132, 252, 0.06) 0%,
+      transparent 40%
+    );
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  background-image: var(--page-gradient);
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
+
+/* Hybrid Profile Themes */
+.theme-software {
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --hero-gradient: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    rgba(170, 59, 255, 0.14) 0%,
+    transparent 70%
+  );
+}
+
+.theme-english {
+  --accent: #d97706;
+  --accent-bg: rgba(217, 119, 6, 0.15);
+  --accent-border: rgba(217, 119, 6, 0.5);
+  --sans: Georgia, 'Times New Roman', serif;
+  --heading: Georgia, 'Times New Roman', serif;
+  --hero-gradient: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    rgba(217, 119, 6, 0.14) 0%,
+    transparent 70%
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme-software {
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.12);
+    --accent-border: rgba(192, 132, 252, 0.4);
+    --hero-gradient: radial-gradient(
+      ellipse 80% 60% at 50% 0%,
+      rgba(192, 132, 252, 0.2) 0%,
+      transparent 70%
+    );
+  }
+
+  .theme-english {
+    --accent: #f59e0b;
+    --accent-bg: rgba(245, 158, 11, 0.15);
+    --accent-border: rgba(245, 158, 11, 0.4);
+    --hero-gradient: radial-gradient(
+      ellipse 80% 60% at 50% 0%,
+      rgba(245, 158, 11, 0.18) 0%,
+      transparent 70%
+    );
+  }
+}

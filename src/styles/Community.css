@@ -1,0 +1,242 @@
+/* ==========================================================================
+   Community Section Styling — 100% Strict Symmetrical Viewport & Mobile Fit
+   ========================================================================== */
+
+.community-page {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  background: var(--bg, #0d0e12) !important;
+  color: var(--text, #9ca3af) !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* ---- Hero Slider & Arrows ---- */
+.community-hero-slider {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 85vh !important;
+  min-height: 580px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.hero-slider-content-container {
+  z-index: 5 !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  padding: 0 80px !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  box-sizing: border-box !important;
+  margin: 0 auto !important;
+}
+
+.slider-arrow {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 30 !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  background: rgba(18, 14, 28, 0.85) !important;
+  border: 1px solid var(--accent-border, rgba(168, 85, 247, 0.4)) !important;
+  color: #ffffff !important;
+  font-size: 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+}
+
+.slider-arrow:hover {
+  background: var(--accent, #c084fc) !important;
+  border-color: var(--accent) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 16px var(--accent-glow) !important;
+  transform: translateY(-50%) scale(1.08) !important;
+}
+
+.arrow-left {
+  left: 24px !important;
+  right: auto !important;
+}
+
+.arrow-right {
+  right: 24px !important;
+  left: auto !important;
+}
+
+/* Dots Bar Centered at Bottom */
+.slider-dots {
+  z-index: 20 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  position: absolute !important;
+  bottom: 24px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+/* ---- Compact Date Badge ---- */
+.duration-tag {
+  display: inline-block !important;
+  width: auto !important;
+  max-width: fit-content !important;
+  font-family: var(--mono, monospace) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
+  color: var(--accent, #c084fc) !important;
+  background: var(--accent-bg, rgba(168, 85, 247, 0.12)) !important;
+  border: 1px solid var(--accent-border, rgba(168, 85, 247, 0.3)) !important;
+  border-radius: 20px !important;
+  padding: 4px 14px !important;
+  margin-bottom: 14px !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ---- Achievements Single Clean Bullet Point ---- */
+.achievements-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 16px 0 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+.achievement-item {
+  font-size: 14.5px !important;
+  color: var(--text, #9ca3af) !important;
+  line-height: 1.6 !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  position: relative !important;
+}
+
+.achievement-item::before {
+  content: '✦' !important;
+  color: var(--accent, #c084fc) !important;
+  font-size: 10px !important;
+  margin-right: 10px !important;
+  margin-top: 4px !important;
+  flex-shrink: 0 !important;
+  line-height: 1 !important;
+}
+
+.achievement-text {
+  color: var(--text, #9ca3af) !important;
+  font-size: 14.5px !important;
+  line-height: 1.6 !important;
+}
+
+/* 100% Strict Symmetrical Mobile & Tablet Breakpoints */
+@media (max-width: 1024px) {
+  .hero-slider-content-container {
+    padding: 0 64px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .community-page {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  .community-hero-slider {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 480px !important;
+    padding: 85px 0 60px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  .hero-slider-content-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 52px !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+  }
+  .hero-slider-card {
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .community-hero-slider .hero-title {
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 12px !important;
+    word-break: break-word !important;
+  }
+  .community-hero-slider .hero-subtitle {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 20px !important;
+  }
+  .hero-actions {
+    justify-content: center !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+  .hero-actions .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 12px 14px !important;
+    font-size: 13px !important;
+    white-space: normal !important;
+  }
+  /* Vertically-Centered, 100% Symmetrical Edge Arrows */
+  .slider-arrow {
+    position: absolute !important;
+    top: 50% !important;
+    bottom: auto !important;
+    transform: translateY(-50%) !important;
+    z-index: 35 !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 14px !important;
+    background: rgba(18, 14, 28, 0.85) !important;
+    border: 1px solid var(--accent-border, rgba(168, 85, 247, 0.4)) !important;
+    color: #ffffff !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+  }
+  .slider-arrow:hover {
+    transform: translateY(-50%) scale(1.08) !important;
+  }
+  .arrow-left {
+    left: 10px !important;
+    right: auto !important;
+  }
+  .arrow-right {
+    right: 10px !important;
+    left: auto !important;
+  }
+  .slider-dots {
+    bottom: 16px !important;
+  }
+}
