@@ -156,14 +156,14 @@ code {
 }
 
 .theme-english {
-  --accent: #d97706;
-  --accent-bg: rgba(217, 119, 6, 0.15);
-  --accent-border: rgba(217, 119, 6, 0.5);
+  --accent: #2563eb;
+  --accent-bg: rgba(37, 99, 235, 0.12);
+  --accent-border: rgba(37, 99, 235, 0.45);
   --sans: Georgia, 'Times New Roman', serif;
   --heading: Georgia, 'Times New Roman', serif;
   --hero-gradient: radial-gradient(
     ellipse 80% 60% at 50% 0%,
-    rgba(217, 119, 6, 0.14) 0%,
+    rgba(37, 99, 235, 0.14) 0%,
     transparent 70%
   );
 }
@@ -181,13 +181,22 @@ code {
   }
 
   .theme-english {
-    --accent: #f59e0b;
-    --accent-bg: rgba(245, 158, 11, 0.15);
-    --accent-border: rgba(245, 158, 11, 0.4);
+    --accent: #60a5fa;
+    --accent-bg: rgba(96, 165, 250, 0.15);
+    --accent-border: rgba(96, 165, 250, 0.4);
     --hero-gradient: radial-gradient(
       ellipse 80% 60% at 50% 0%,
-      rgba(245, 158, 11, 0.18) 0%,
+      rgba(96, 165, 250, 0.18) 0%,
       transparent 70%
     );
+  }
+}
+
+/* Mobile Device Blue Primary Accent Adjustments */
+@media (max-width: 768px) {
+  .theme-english {
+    --accent: #3b82f6 !important;
+    --accent-bg: rgba(59, 130, 246, 0.16) !important;
+    --accent-border: rgba(59, 130, 246, 0.5) !important;
   }
 }
