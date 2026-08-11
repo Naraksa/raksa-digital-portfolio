@@ -2,6 +2,7 @@ import { useState, useRef, useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolioData.js';
 import { useInView } from '../hooks/useInView.js';
+import TelegramModal from './TelegramModal.jsx';
 import '../styles/Hero.css';
 
 const EDGE_THRESHOLD = 0.12; // Outer 12% of screen triggers swap hint
@@ -11,6 +12,7 @@ const MAX_TILT_Y = 6;        // Soft 6deg horizontal tilt
 export default function Hero({ major = 'software', onSwap }) {
   const [heroMajor, setHeroMajor] = useState(major);
   const [isSwapping, setIsSwapping] = useState(false);
+  const [showTelegramQR, setShowTelegramQR] = useState(false);
   const sectionRef = useRef(null);
   const containerRef = useRef(null);
   const leftHintRef = useRef(null);
@@ -208,12 +210,28 @@ export default function Hero({ major = 'software', onSwap }) {
               <p className="hero-tagline-uppercase">BUILD. LEAD. LEARN.</p>
 
               <div className="hero-actions">
-                <Link to="/projects" className="btn btn-primary glow-btn">
-                  Explore Featured Work
-                </Link>
-                <Link to="/contact" className="btn btn-secondary">
-                  Get In Touch
-                </Link>
+                <div className="hero-actions-row">
+                  <Link to="/projects" className="btn btn-primary glow-btn">
+                    Explore Featured Work
+                  </Link>
+                  <Link to="/contact" className="btn btn-secondary">
+                    Get In Touch
+                  </Link>
+                </div>
+                <button
+                  type="button"
+                  className="btn btn-telegram-pill"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowTelegramQR(true);
+                  }}
+                  title="Scan Telegram QR Code"
+                >
+                  <svg className="telegram-btn-svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.8 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.99 1.27-5.62 3.72-.53.36-1.01.54-1.44.53-.47-.01-1.38-.27-2.05-.49-.83-.27-1.48-.42-1.42-.88.03-.24.37-.49 1.02-.75 3.99-1.74 6.66-2.88 8.01-3.44 3.81-1.58 4.6-1.86 5.12-1.87.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.21-.04.37z" />
+                  </svg>
+                  <span>Telegram QR</span>
+                </button>
               </div>
 
               <div className="hero-meta">
@@ -256,6 +274,9 @@ export default function Hero({ major = 'software', onSwap }) {
             <path d="M9 15l3 3 3-3" />
           </svg>
         </div>
+
+        {/* Telegram QR Code Modal */}
+        <TelegramModal isOpen={showTelegramQR} onClose={() => setShowTelegramQR(false)} />
       </section>
 
       {/* Featured Work Section */}

@@ -42,29 +42,31 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #0d0e12;
-    --border: #1e2029;
-    --code-bg: #161720;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.12);
-    --accent-border: rgba(192, 132, 252, 0.4);
-    --social-bg: rgba(30, 32, 41, 0.6);
+    --text: #949ba8;
+    --text-h: #e2e4ea;
+    --bg: #0c0d12;
+    --card-bg: #13141c;
+    --border: #1a1c26;
+    --code-bg: #151722;
+    --accent: #a78bfa;
+    --accent-bg: rgba(167, 139, 250, 0.09);
+    --accent-border: rgba(167, 139, 250, 0.32);
+    --accent-glow: rgba(167, 139, 250, 0.16);
+    --social-bg: rgba(26, 28, 38, 0.6);
     --shadow:
-      rgba(0, 0, 0, 0.5) 0 10px 15px -3px, rgba(0, 0, 0, 0.3) 0 4px 6px -2px;
+      rgba(0, 0, 0, 0.45) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
     --shadow-lg:
-      rgba(0, 0, 0, 0.6) 0 25px 50px -12px;
+      rgba(0, 0, 0, 0.55) 0 25px 50px -12px;
     --hero-gradient: radial-gradient(ellipse 80% 60% at 50% 0%,
-        rgba(192, 132, 252, 0.18) 0%,
+        rgba(167, 139, 250, 0.08) 0%,
         transparent 70%);
     --page-gradient: linear-gradient(180deg,
-        rgba(192, 132, 252, 0.06) 0%,
+        rgba(167, 139, 250, 0.03) 0%,
         transparent 40%);
   }
 
   #social .button-icon {
-    filter: invert(1) brightness(2);
+    filter: invert(1) brightness(1.5);
   }
 }
 
@@ -139,43 +141,47 @@ code {
 
 /* Hybrid Profile Themes */
 .theme-software {
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
+  --accent: #9d78e6;
+  --accent-bg: rgba(157, 120, 230, 0.08);
+  --accent-border: rgba(157, 120, 230, 0.3);
+  --accent-glow: rgba(157, 120, 230, 0.16);
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --hero-gradient: radial-gradient(ellipse 80% 60% at 50% 0%,
-      rgba(170, 59, 255, 0.14) 0%,
+      rgba(157, 120, 230, 0.08) 0%,
       transparent 70%);
 }
 
 .theme-english {
-  --accent: #2563eb;
-  --accent-bg: rgba(37, 99, 235, 0.12);
-  --accent-border: rgba(37, 99, 235, 0.45);
+  --accent: #3b82f6;
+  --accent-bg: rgba(59, 130, 246, 0.08);
+  --accent-border: rgba(59, 130, 246, 0.3);
+  --accent-glow: rgba(59, 130, 246, 0.16);
   --sans: Georgia, 'Times New Roman', serif;
   --heading: Georgia, 'Times New Roman', serif;
   --hero-gradient: radial-gradient(ellipse 80% 60% at 50% 0%,
-      rgba(37, 99, 235, 0.14) 0%,
+      rgba(59, 130, 246, 0.08) 0%,
       transparent 70%);
 }
 
 @media (prefers-color-scheme: dark) {
   .theme-software {
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.12);
-    --accent-border: rgba(192, 132, 252, 0.4);
+    --accent: #a78bfa;
+    --accent-bg: rgba(167, 139, 250, 0.09);
+    --accent-border: rgba(167, 139, 250, 0.3);
+    --accent-glow: rgba(167, 139, 250, 0.16);
     --hero-gradient: radial-gradient(ellipse 80% 60% at 50% 0%,
-        rgba(192, 132, 252, 0.2) 0%,
+        rgba(167, 139, 250, 0.08) 0%,
         transparent 70%);
   }
 
   .theme-english {
-    --accent: #60a5fa;
-    --accent-bg: rgba(96, 165, 250, 0.15);
-    --accent-border: rgba(96, 165, 250, 0.4);
+    --accent: #4fa1f7;
+    --accent-bg: rgba(79, 161, 247, 0.09);
+    --accent-border: rgba(79, 161, 247, 0.3);
+    --accent-glow: rgba(79, 161, 247, 0.16);
     --hero-gradient: radial-gradient(ellipse 80% 60% at 50% 0%,
-        rgba(96, 165, 250, 0.18) 0%,
+        rgba(79, 161, 247, 0.08) 0%,
         transparent 70%);
   }
 }
@@ -183,8 +189,9 @@ code {
 /* Mobile Device Blue Primary Accent Adjustments */
 @media (max-width: 768px) {
   .theme-english {
-    --accent: #3b82f6 !important;
-    --accent-bg: rgba(59, 130, 246, 0.16) !important;
-    --accent-border: rgba(59, 130, 246, 0.5) !important;
+    --accent: #4fa1f7 !important;
+    --accent-bg: rgba(79, 161, 247, 0.1) !important;
+    --accent-border: rgba(79, 161, 247, 0.35) !important;
+    --accent-glow: rgba(79, 161, 247, 0.15) !important;
   }
 }

@@ -125,7 +125,8 @@ export const portfolioData = {
       socialLinks: [
         { name: 'GitHub', url: 'https://github.com/Naraksa', icon: 'github' },
         { name: 'LinkedIn', url: 'https://www.linkedin.com/in/naraksa-veasna', icon: 'linkedin' },
-        { name: 'Facebook', url: 'https://www.facebook.com/share/17oJU3AEhw/', icon: 'facebook' }
+        { name: 'Facebook', url: 'https://www.facebook.com/share/17oJU3AEhw/', icon: 'facebook' },
+        { name: 'Telegram', url: 'https://t.me/UR_RAKSA', icon: 'telegram' }
       ]
     },
     about: {
@@ -204,6 +205,8 @@ export const portfolioData = {
     contact: {
       message: 'I aspire to become a software engineer who bridges technology, communication, and leadership to build innovative digital products that create positive social and economic impact. Feel free to reach out for collaboration or inquiries!',
       email: 'naraksaveasna@gmail.com',
+      telegram: 'https://t.me/UR_RAKSA',
+      telegramHandle: '@UR_RAKSA',
       location: 'Phnom Penh, Cambodia'
     },
     community: [
@@ -248,7 +251,8 @@ export const portfolioData = {
       socialLinks: [
         { name: 'GitHub', url: 'https://github.com/Naraksa', icon: 'github' },
         { name: 'LinkedIn', url: 'https://www.linkedin.com/in/naraksa-veasna', icon: 'linkedin' },
-        { name: 'Facebook', url: 'https://www.facebook.com/share/17oJU3AEhw/', icon: 'facebook' }
+        { name: 'Facebook', url: 'https://www.facebook.com/share/17oJU3AEhw/', icon: 'facebook' },
+        { name: 'Telegram', url: 'https://t.me/UR_RAKSA', icon: 'telegram' }
       ]
     },
     about: {
@@ -269,6 +273,8 @@ export const portfolioData = {
     contact: {
       message: "I am always open to discussions regarding English language education, community leadership, event collaboration, or digital initiatives. Let's connect and create meaningful impact together!",
       email: 'naraksaveasna@gmail.com',
+      telegram: 'https://t.me/UR_RAKSA',
+      telegramHandle: '@UR_RAKSA',
       location: 'Phnom Penh, Cambodia'
     },
     community: [

@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useInView } from '../hooks/useInView.js';
+import TelegramModal from './TelegramModal.jsx';
+import telegramQrImg from '../assets/telegram_qr.png';
 import '../styles/Contact.css';
 
 export default function Contact({
@@ -12,6 +14,7 @@ export default function Contact({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [copied, setCopied] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
+  const [showTelegramQR, setShowTelegramQR] = useState(false);
 
   const [headerRef, headerInView] = useInView(0.1);
   const [infoRef, infoInView] = useInView(0.1);
@@ -105,7 +108,7 @@ export default function Contact({
         <div className="contact-content">
           {/* Contact Info Column */}
           <div ref={infoRef} className={`contact-info reveal-left ${infoInView ? 'in-view' : ''} delay-1`}>
-            <p className="contact-message">{message}</p>
+            {/* <p className="contact-message">{message}</p> */}
 
             <div className="contact-cards-list">
               <div className="contact-card-item">
@@ -123,6 +126,28 @@ export default function Contact({
                 </div>
                 <button className="copy-btn" onClick={handleCopyEmail} title="Copy email">
                   {copied ? '✓ Copied' : 'Copy'}
+                </button>
+              </div>
+
+              <div className="contact-card-item telegram-card-item">
+                <div className="contact-icon-box telegram-icon-box">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.8 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.99 1.27-5.62 3.72-.53.36-1.01.54-1.44.53-.47-.01-1.38-.27-2.05-.49-.83-.27-1.48-.42-1.42-.88.03-.24.37-.49 1.02-.75 3.99-1.74 6.66-2.88 8.01-3.44 3.81-1.58 4.6-1.86 5.12-1.87.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.21-.04.37z" />
+                  </svg>
+                </div>
+                <div className="contact-card-text">
+                  <span className="contact-card-label">Telegram Direct</span>
+                  <a href="https://t.me/UR_RAKSA" target="_blank" rel="noopener noreferrer" className="contact-card-value">
+                    @UR_RAKSA
+                  </a>
+                </div>
+                <button
+                  type="button"
+                  className="copy-btn qr-trigger-btn"
+                  onClick={() => setShowTelegramQR(true)}
+                  title="Scan Telegram QR Code"
+                >
+                  QR Code
                 </button>
               </div>
 
@@ -153,6 +178,26 @@ export default function Contact({
               </div>
             </div>
 
+            {/* Embedded Telegram QR Feature Card */}
+            <div className="contact-qr-card">
+              <div className="contact-qr-header">
+                <span className="qr-badge">Quick Scan</span>
+                <h4 className="contact-qr-title">Instant Telegram Connect</h4>
+                <p className="contact-qr-desc">Scan with your camera or Telegram app to message immediately</p>
+              </div>
+              <div className="contact-qr-preview-wrapper" onClick={() => setShowTelegramQR(true)} title="Tap to expand QR code">
+                <img src={telegramQrImg} alt="Telegram QR Code @UR_RAKSA" className="contact-qr-img" />
+                <div className="qr-hover-overlay">
+                  <span>Tap to Expand</span>
+                </div>
+              </div>
+              <div className="contact-qr-actions">
+                <a href="https://t.me/UR_RAKSA" target="_blank" rel="noopener noreferrer" className="btn-contact-telegram">
+                  Open @UR_RAKSA ↗
+                </a>
+              </div>
+            </div>
+
             <div className="direct-social-row">
               <a href="https://github.com/Naraksa" target="_blank" rel="noopener noreferrer" className="social-pill">
                 GitHub ↗
@@ -162,6 +207,9 @@ export default function Contact({
               </a>
               <a href="https://www.facebook.com/share/17oJU3AEhw/" target="_blank" rel="noopener noreferrer" className="social-pill">
                 Facebook ↗
+              </a>
+              <a href="https://t.me/UR_RAKSA" target="_blank" rel="noopener noreferrer" className="social-pill telegram-pill">
+                Telegram ↗
               </a>
             </div>
           </div>
@@ -260,6 +308,9 @@ export default function Contact({
             ))}
           </div>
         </div>
+
+        {/* Telegram QR Code Modal */}
+        <TelegramModal isOpen={showTelegramQR} onClose={() => setShowTelegramQR(false)} />
       </div>
     </section>
   );

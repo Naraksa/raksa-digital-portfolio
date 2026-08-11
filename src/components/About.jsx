@@ -606,7 +606,7 @@ export default function About() {
         <div className="row flex-align-center">
           <div className="col-text block-text-col">
             <h2>Future Vision</h2>
-            <p className="description-text" style={{ fontSize: '18px', lineHeight: '1.8' }}>
+            <p className="description-text">
               I've always believed that the right opportunity — a word learned, a door opened, a connection made — can change someone's entire trajectory. Growing up in Cambodia, I watched brilliant people stay quiet not because they had nothing to say, but because the language felt like a wall they couldn't climb alone.
               <br /><br />
               So here's a thought I keep coming back to: <em>what if that wall could become a bridge?</em> Not built by textbooks or lecture halls, but by people — learning together, stumbling together, slowly getting there together.
